@@ -2,7 +2,7 @@
 
 Following Angela Yu's course 100DaysOfCode Python.
 
-=============================================================
+
 Day wise List for entire course:
 =============================================================
 
