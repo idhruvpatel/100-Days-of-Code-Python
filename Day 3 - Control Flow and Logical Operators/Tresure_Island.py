@@ -23,7 +23,31 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("\n Welcome to Treasure Island. \n")
 print("Your mission is to find the treasure.\n")
 
-user_choice = lower(
-    input("You are at cross road. Where do you want to go? Type 'Left' or 'Right'?"))
+direction_choice = input("You are at cross road. Where do you want to go? Type 'Left' or 'Right'? \n").lower()
 
-if user_choice == "left":
+if direction_choice == "left":
+    action_choice = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait '
+                          'for a boat. Type "swim" to swim across. \n').lower()
+    if action_choice == "wait":
+        door_choice = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow "
+                            "and one blue. Which colour do you choose? \n").lower()
+        if door_choice == "red":
+            print("It's a room full of fire. Game Over.")
+        elif door_choice == "yellow":
+            print("""
+                   >|___,____,____,___|<
+                  /d$$$P ,ssssssssssss. \\
+                 /d$$$P ,d$$$$$$$$$$$$$b \\
+                <=====w======w======w=====>
+                 \ \____> \_____/ <____/ /
+                  \_____________________/ 
+
+            You found the treasure! You Win!""")
+        elif door_choice == "blue":
+            print("You enter a room of beasts. Game Over.")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
+    else:
+        print("You get attacked by an angry trout. Game Over.")
+else:
+    print("You fell into a hole. Game Over.")
